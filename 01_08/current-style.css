@@ -23,21 +23,28 @@ img {
 }
 
 .main {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 2rem;
-  max-width: calc(var(--content-width) - 4rem);
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, var(--content-width)) 1fr;
 }
 
 main > * {
   padding: 2rem;
+  grid-column: 2;
 }
 
 .highlight {
   background-color: rgb(71, 167, 251);
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.highlight > * {
+  grid-column: 2;
+  padding: 0 2rem;
 }
 
 .full-width {
- 
+  grid-column: span 3;
+  padding-left: 0;
+  padding-right: 0;
 }
-

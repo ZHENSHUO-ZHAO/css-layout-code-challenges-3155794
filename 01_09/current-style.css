@@ -1,5 +1,5 @@
 :root {
-  --content-width: 50ch;
+  --content-width: 40ch;
 }
 
 body {
@@ -24,22 +24,28 @@ img {
 }
 
 .main {
-
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-
+  border: 0.5rem, solid black;
+  margin: 2rem;
+  width: clamp(20ch, 50%, var(--content-width));
 }
 
 .card figcaption {
-
+  margin: 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h2 {
-
+  margin-block-end: 0;
 }
 
 .card button {
+  align-self: flex-end;
   padding: 0.75rem 1rem;
   border: 0.25rem solid black;
   font-size: 1rem;
